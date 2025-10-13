@@ -17,6 +17,12 @@ const SidebarContainer = styled.header`
     position: relative;
     height: auto;
     padding: 2rem;
+    overflow-y: visible; /* Disable vertical scroll when stacked */
+  }
+
+  /* Styles for short screens */
+  @media (max-height: 720px) and (min-width: 1081px){
+    padding: 2rem;
   }
 `;
 
@@ -27,6 +33,12 @@ const ProfilePic = styled.img`
   object-fit: cover;
   border: 3px solid ${({ theme }) => theme.primary};
   margin-bottom: 1.5rem;
+
+  @media (max-height: 720px) {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 1rem;
+  }
 `;
 
 const IntroContainer = styled.div`
@@ -35,9 +47,13 @@ const IntroContainer = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: clamp(20px, 4vw, 40px);
+  font-size: clamp(28px, 5vw, 40px);
   color: ${({ theme }) => theme.text};
   margin: 0;
+
+  @media (max-height: 720px) {
+    font-size: clamp(24px, 5vw, 28px);
+  }
 `;
 
 const Tagline = styled.h2`
