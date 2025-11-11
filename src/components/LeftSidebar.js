@@ -112,7 +112,7 @@ const LeftSidebar = () => {
       </IntroContainer>
       <div>
         <Navbar />
-        <ResumeButton href="https://drive.google.com/file/d/1oi41tZxBzrtzzxzoYROCEkpICMfl2P0-/view?usp=sharing" target="_blank" rel="noopener noreferrer">View Resume</ResumeButton>
+        <ResumeButton href="https://drive.google.com/file/d/15DlmKGcW4fOFxjGP4BY8RU1K6qHQmYHF/view" target="_blank" rel="noopener noreferrer">View Resume</ResumeButton>
         <Socials />
       </div>
     </SidebarContainer>
