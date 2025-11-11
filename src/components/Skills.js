@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import {
   FaPython, FaJsSquare, FaJava, FaHtml5, FaCss3Alt, FaNodeJs,
-  FaReact, FaAngular, FaDocker, FaGitAlt, FaAws, FaGoogle, FaDatabase, FaCode, FaBitbucket, FaJira
+  FaReact, FaAngular, FaDocker, FaGitAlt, FaAws, FaGoogle, FaCode, FaBitbucket, FaJira
 } from 'react-icons/fa';
 import { SiSpring, SiKubernetes, SiFlask, SiOracle, SiMysql, SiMongodb } from 'react-icons/si';
 
