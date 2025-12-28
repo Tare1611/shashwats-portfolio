@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { projectsData } from '../data/portfolioData';
 
 const ProjectsSection = styled.section`
   padding: 4rem 2rem;
@@ -63,7 +64,7 @@ const TechItem = styled.li`
   font-family: 'Fira Code', monospace;
 `;
 
-import { projectsData } from '../data/portfolioData';
+
 
 const Projects = () => {
   const projectData = projectsData;

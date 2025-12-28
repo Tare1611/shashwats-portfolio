@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { experienceData } from '../data/portfolioData';
 
 const ExperienceSection = styled.section`
   padding: 4rem 2rem;
@@ -102,7 +103,7 @@ const YearMarker = styled.div`
 `;
 
 
-import { experienceData } from '../data/portfolioData';
+
 
 const Experience = () => {
   const timelineData = experienceData;
