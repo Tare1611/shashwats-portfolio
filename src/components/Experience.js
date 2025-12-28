@@ -102,44 +102,16 @@ const YearMarker = styled.div`
 `;
 
 
+import { experienceData } from '../data/portfolioData';
+
 const Experience = () => {
-  const timelineData = [
-    {
-      type: 'experience',
-      role: 'Software Engineer',
-      company: 'Kopacetic Inc.',
-      period: 'Aug 2025 - Present',
-      description: 'Optimized backend codebase in Node.js and TypeScript, improving system performance and maintainability. Streamlined Docker builds for GCP deployment, reducing image size and build times. Engineered and enhanced Angular frontend components to ensure a responsive, consistent user interface.',
-      url: 'https://trykopa.ai',
-    },
-    {
-      type: 'education',
-      role: 'Master of Science in Computer Science',
-      company: 'University of Texas at Arlington',
-      period: 'Aug 2023 - May 2025',
-      description: 'Relevant Coursework: Cloud Computing, Machine Learning, AI, Distributed Systems. Awarded Vruwink Outstanding Grad Student 2025.',
-    },
-    {
-      type: 'experience',
-      role: 'Associate Consultant',
-      company: 'Oracle Financial Services Software Ltd.',
-      period: 'Jun 2022 - Aug 2023',
-      description: 'Optimized SQL queries to reduce report generation time by 90%. Engineered scalable Java backend services using Spring Boot, integrating over 15 client-driven features. Resolved over 100 client-reported issues, boosting operational efficiency by 30%.',
-    },
-    {
-      type: 'education',
-      role: 'Bachelor of Technology in Computer Engineering',
-      company: 'NMIMS University',
-      period: 'Jun 2018 - Apr 2022',
-      description: 'Relevant Coursework: Advanced Web Development, Object-Oriented Programming, Database Management.',
-    },
-  ];
+  const timelineData = experienceData;
 
   // This logic groups items by year and places the year marker after the items.
   const processedTimeline = timelineData.reduce((acc, item, index) => {
     // Get the start year of the current item
     const currentYear = item.period.match(/\d{4}/)[0];
-    
+
     // Add the item to the accumulator
     acc.push(item);
 
@@ -157,7 +129,7 @@ const Experience = () => {
   return (
     <ExperienceSection id="experience">
       <Title>Experience & Education</Title>
-      <Timeline> 
+      <Timeline>
         {processedTimeline.map((item, index) => {
           if (item.type === 'yearMarker') {
             return <YearMarker key={`year-${item.year}`}><span>{item.year}</span></YearMarker>;

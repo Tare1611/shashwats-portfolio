@@ -63,24 +63,10 @@ const TechItem = styled.li`
   font-family: 'Fira Code', monospace;
 `;
 
+import { projectsData } from '../data/portfolioData';
+
 const Projects = () => {
-  const projectData = [
-    {
-      title: 'BotKonnect - AI-Powered Phone Call Assistant',
-      description: 'Developed an AI-driven phone assistant using OpenAI API & Twilio, improving call efficiency by 40%. Built a MERN stack dashboard for real-time business analytics.',
-      tech: ['MERN', 'OpenAI API', 'Twilio', 'Node.js', 'React'],
-    },
-    {
-      title: 'Semantic Search Engine',
-      description: 'Engineered a search engine using NLP and Deep Learning on a large-scale IMDB dataset, increasing search accuracy by 35%. Utilized BERT-based semantic encoding and optimized retrieval speeds by 60% with Elasticsearch.',
-      tech: ['Python', 'NLP', 'Deep Learning', 'BERT', 'Elasticsearch'],
-    },
-    {
-      title: 'SecuroServe - Secure Chat App',
-      description: 'Collaborated on a real-time messaging application using a MEAN stack. Implemented end-to-end encryption to reduce security risks by 80% while enabling secure, low-bandwidth communication.',
-      tech: ['MEAN', 'Angular', 'Node.js', 'MongoDB', 'Encryption'],
-    },
-  ];
+  const projectData = projectsData;
 
   return (
     <ProjectsSection id="projects">

@@ -9,6 +9,7 @@ import About from './components/About';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Testimonials from './components/Testimonials';
+import Chatbot from './components/Chatbot';
 
 const Layout = styled.div`
   display: grid;
@@ -44,6 +45,7 @@ function App() {
           <Testimonials />
           {/* Contact section will go here */}
         </RightColumn>
+        <Chatbot />
       </Layout>
     </ThemeProvider>
   );

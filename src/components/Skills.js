@@ -1,10 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {
-  FaPython, FaJsSquare, FaJava, FaHtml5, FaCss3Alt, FaNodeJs,
-  FaReact, FaAngular, FaDocker, FaGitAlt, FaAws, FaGoogle, FaCode, FaBitbucket, FaJira
-} from 'react-icons/fa';
-import { SiSpring, SiKubernetes, SiFlask, SiOracle, SiMysql, SiMongodb } from 'react-icons/si';
+import { skillsData } from '../data/portfolioData';
 
 const SkillsSection = styled.section`
   padding: 4rem 2rem;
@@ -54,37 +50,13 @@ const SkillName = styled.span`
   font-size: 0.9rem;
 `;
 
-const skillsList = [
-  { name: 'Python', icon: <FaPython /> },
-  { name: 'JavaScript', icon: <FaJsSquare /> },
-  { name: 'Java', icon: <FaJava /> },
-  { name: 'TypeScript', icon: <SiFlask /> }, // Using a placeholder, FaCode can also be used
-  { name: 'HTML5', icon: <FaHtml5 /> },
-  { name: 'CSS3', icon: <FaCss3Alt /> },
-  { name: 'Node.js', icon: <FaNodeJs /> },
-  { name: 'React', icon: <FaReact /> },
-  { name: 'Angular', icon: <FaAngular /> },
-  { name: 'Spring', icon: <SiSpring /> },
-  { name: 'Flask', icon: <SiFlask /> },
-  { name: 'Oracle SQL', icon: <SiOracle /> },
-  { name: 'MySQL', icon: <SiMysql /> },
-  { name: 'MongoDB', icon: <SiMongodb /> },
-  { name: 'Google Cloud', icon: <FaGoogle /> },
-  { name: 'AWS', icon: <FaAws /> },
-  { name: 'Docker', icon: <FaDocker /> },
-  { name: 'Kubernetes', icon: <SiKubernetes /> },
-  { name: 'Git', icon: <FaGitAlt /> },
-  { name: 'Bitbucket', icon: <FaBitbucket /> },
-  { name: 'Jira', icon: <FaJira /> },
-  { name: 'REST APIs', icon: <FaCode /> },
-];
 
 const Skills = () => {
   return (
     <SkillsSection id="skills">
       <Title>Technologies I Use</Title>
       <SkillsGrid>
-        {skillsList.map((skill) => {
+        {skillsData.map((skill) => {
           return (
             <SkillCard key={skill.name}>
               {skill.icon ? (
